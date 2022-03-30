@@ -1,0 +1,26 @@
+__metaclass__ = type 
+
+file_in = open("C:\\Users\\Administrator\\Desktop\\fadr.fasta")
+file_out = open("C:\\Users\\Administrator\\Desktop\\fadr-rev.fasta","w")
+file_out.write(file_in.readline())
+a=""
+for line in file_in:
+    line = line.strip()
+    a += line
+my_dna = a
+#!/usr/bin/python
+# Complementing DNA
+# 由于python 区分大小写，所以先替换成小写可以有效避免后面重复替换的问题。
+complement_AT = my_dna.replace("A","t")
+complement_TA = complement_AT.replace("T","a")
+complement_GC = complement_TA.replace("G","c")
+complement_CG = complement_GC.replace("C","g")
+# 把所以小写变为大写即可。
+complement_DNA = complement_CG.upper()
+reverse_complement_DNA = complement_DNA[::-1]  
+# str[::-1] used to reverse the string
+ 
+# print(complement_DNA)
+# print(reverse_complement_DNA)
+# reverse_DNA = my_dna[::-1]
+file_out.write(reverse_complement_DNA)
