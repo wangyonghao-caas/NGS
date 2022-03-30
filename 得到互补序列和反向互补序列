@@ -1,5 +1,5 @@
 __metaclass__ = type 
-
+#输入和输出的文件位置
 file_in = open("C:\\Users\\Administrator\\Desktop\\fadr.fasta")
 file_out = open("C:\\Users\\Administrator\\Desktop\\fadr-rev.fasta","w")
 file_out.write(file_in.readline())
@@ -17,10 +17,11 @@ complement_GC = complement_TA.replace("G","c")
 complement_CG = complement_GC.replace("C","g")
 # 把所以小写变为大写即可。
 complement_DNA = complement_CG.upper()
-reverse_complement_DNA = complement_DNA[::-1]  
+reverse_complement_DNA = complement_DNA[::-1] 
 # str[::-1] used to reverse the string
- 
 # print(complement_DNA)
 # print(reverse_complement_DNA)
+#得到反向序列，若需要取消注释即可
 # reverse_DNA = my_dna[::-1]
+#输出反向互补序列
 file_out.write(reverse_complement_DNA)
