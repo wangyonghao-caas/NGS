@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*- 
-
+#输入和输出文件的位置及名称
 file_in = open("D:\\a菌株基因组数据\\MgPL202012872\\a\\3_Assembly\\chr.fasta")
 file_out = open("C:\\Users\\Administrator\\Desktop\\fadr.fasta","w")
 file_out.write(file_in.readline())
